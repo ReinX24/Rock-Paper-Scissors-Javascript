@@ -1,0 +1,44 @@
+.rpsText{
+
+display: flex;
+flex-direction: column;
+font-family: 'Courier New', Courier, monospace;
+height: 100vh;
+width: 100vw;
+justify-content: center;
+align-items: center;
+
+line-height: 3rem;
+
+}
+
+.button {
+
+display: flex;
+justify-content: center;
+
+}
+
+button {
+
+font-family: 'Courier New', Courier, monospace;
+font-size: 1.5rem;
+height: 5rem;
+width: 12rem;
+background-color: #008080;
+color: yellow;
+border-radius: 1.5rem;
+
+}
+
+button:hover {
+    cursor: pointer;
+  }
+
+.description {
+
+text-align: center;
+padding-left: 3rem;
+padding-right: 3rem;
+
+}
