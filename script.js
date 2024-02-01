@@ -24,11 +24,17 @@ function playRound(playerSelection, computerSelection) {
 
 function game(playerSelection) {
 
-    // Shows the cards
-    document.querySelector("#choice-card").classList.remove("d-none")
-    document.querySelector("#score-card").classList.remove("d-none")
-
     if (roundNumber < maxRounds) {
+
+        const scoreCard = document.querySelector('#score-card')
+
+        scoreCard.classList.remove('text-bg-success')
+        scoreCard.classList.remove('text-bg-danger')
+        scoreCard.classList.remove('text-bg-secondary')
+
+        // Shows the cards
+        document.querySelector("#choice-card").classList.remove("d-none")
+        scoreCard.classList.remove("d-none")
 
         const computerSelection = getComputerChoice()
 
@@ -42,15 +48,18 @@ function game(playerSelection) {
         switch (roundWinner) {
             case 'Player Win':
                 playerScore++
+                scoreCard.classList.add('text-bg-success')
                 break;
 
             case 'Computer Win':
                 computerScore++
+                scoreCard.classList.add('text-bg-danger')
                 break;
 
             case 'Tie':
                 playerScore++
                 computerScore++
+                scoreCard.classList.add('text-bg-secondary')
                 break;
 
         }
