@@ -1,5 +1,5 @@
 const choices = ['rock', 'paper', 'scissors']
-const maxRounds = 5
+const maxScore = 5
 let playerScore = 0
 let computerScore = 0
 let roundNumber = 0
@@ -24,7 +24,7 @@ function playRound(playerSelection, computerSelection) {
 
 function game(playerSelection) {
 
-    if (roundNumber < maxRounds) {
+    if (playerScore < maxScore && computerScore < maxScore) {
 
         const scoreCard = document.querySelector('#score-card')
 
@@ -75,7 +75,7 @@ function game(playerSelection) {
         roundNumber++
         document.querySelector("#round-counter").innerHTML = `Round: ${roundNumber}`
 
-        if (roundNumber == maxRounds) {
+        if (playerScore == maxScore || computerScore == maxScore) {
 
             // Show game over jumbotron
             document.querySelector("#game-over-container").classList.remove("d-none")
